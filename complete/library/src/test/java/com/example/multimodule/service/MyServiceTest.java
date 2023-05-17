@@ -1,6 +1,6 @@
 package com.example.multimodule.service;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.assertj.core.api.Assertions;
 
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +16,8 @@ public class MyServiceTest {
 
 	@Test
 	public void contextLoads() {
-		assertThat(myService.message()).isNotNull();
+		System.out.println(myService.message());
+		Assertions.assertThat(myService.message()).isNotNull();
 	}
 
 	@SpringBootApplication
